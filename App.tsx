@@ -20,7 +20,7 @@ const App: React.FC = () => {
         <About />
         <Services />
         <Projects />
-        <VideoEditing />
+        {/* <VideoEditing /> */}
         <Contact />
       </main>
       <Footer />

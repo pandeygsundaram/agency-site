@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
         <div className="z-50">
           <a href="#" className="text-xl md:text-2xl font-bold tracking-tight text-foreground flex items-center gap-2">
             <div className="w-2 h-2 bg-foreground rounded-full"></div>
-            <span>SAMOSA DIGITAL</span>
+            <span>ONE DAY STUDIO</span>
           </a>
         </div>
 

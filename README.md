@@ -1,4 +1,4 @@
-# Samosa Digital
+# One Day Studio
 
 Modern digital agency website built with React, Vite, and Tailwind CSS.
 

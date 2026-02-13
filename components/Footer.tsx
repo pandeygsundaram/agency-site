@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto flex flex-col items-center justify-center gap-8">
           <h3 className="text-2xl font-bold tracking-widest text-foreground uppercase flex items-center gap-2">
             <span className="text-muted">&gt;</span>
-            Samosa_Digital
+            One_Day_Studio
             <span className="animate-pulse">_</span>
           </h3>
           
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                   System_Build: v2.4.0
               </p>
               <p className="text-[10px] text-muted font-mono uppercase">
-                  © {new Date().getFullYear()} Samosa Digital. All rights reserved.
+                  © {new Date().getFullYear()} One Day Studio. All rights reserved.
               </p>
           </div>
       </div>
