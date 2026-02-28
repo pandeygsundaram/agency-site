@@ -1,74 +1,73 @@
-import React from 'react';
-import FadeIn from './FadeIn';
-import { ArrowDown } from 'lucide-react';
+import React from "react";
+import { Star, Rocket, Zap, ArrowRight } from "lucide-react";
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20 border-b border-border">
-      <div className="max-w-7xl mx-auto w-full relative z-10">
-        
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-border pb-6">
-            <FadeIn delay={0.1}>
-                <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
-                    <p className="font-mono text-xs text-muted uppercase tracking-widest">
-                        Available for new projects
-                    </p>
-                </div>
-            </FadeIn>
+    <section className="relative min-h-[85vh] flex flex-col items-center justify-center px-6 md:px-12">
+      <div className="max-w-5xl mx-auto w-full flex flex-col items-center text-center relative z-10">
+        {/* Top Trust Badge */}
+        <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 mb-10">
+          <div className="flex items-center gap-1">
+            <Star className="w-4 h-4 text-green-500 fill-green-500" />
+            <span className="text-sm font-semibold text-black dark:text-white">
+              Trusted by founders
+            </span>
+          </div>
+          <div className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></div>
+          <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
+            Excellent 4.9/5
+          </span>
         </div>
 
-        <FadeIn delay={0.2} className="relative">
-          <h1 className="text-6xl md:text-9xl font-bold text-foreground mb-8 leading-[0.9] tracking-tighter uppercase">
-            We Build<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground to-muted">and Ship.</span>
-          </h1>
-        </FadeIn>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-8">
-            <FadeIn delay={0.3} className="lg:col-span-2">
-                <p className="text-xl md:text-2xl text-muted font-light max-w-2xl leading-relaxed font-sans pl-1">
-                    End-to-end development and creative services. <br/>
-                    From initial idea to production-ready deployment.
-                </p>
-            </FadeIn>
+        {/* Main Typography Header */}
+        <h1 className="text-5xl md:text-7xl lg:text-[84px] font-bold tracking-tight leading-[1.15] text-black dark:text-white mb-8">
+          <span className="inline-block bg-black text-white dark:bg-white dark:text-black px-5 py-1 md:py-2 rounded-2xl md:rounded-3xl relative -rotate-2 top-2 mr-3 shadow-md">
+            We Build
+          </span>
+          & Ship
+          <br className="hidden md:block" />
+          Scalable
+          {/* Inline Icon Bubble */}
+          <span className="inline-flex items-center justify-center bg-gray-100 dark:bg-neutral-900 text-black dark:text-white px-4 py-1 md:py-2 rounded-2xl md:rounded-3xl mx-3 align-middle border border-gray-200 dark:border-neutral-800 shadow-sm">
+            <Rocket className="w-8 h-8 md:w-10 md:h-10 text-green-500" />
+          </span>
+          Software
+          <br className="hidden md:block" />
+          From Idea To
+          <span className="inline-block bg-black text-white dark:bg-white dark:text-black px-5 py-1 md:py-2 rounded-2xl md:rounded-3xl relative rotate-2 -top-1 ml-3 shadow-md">
+            Scale
+          </span>
+        </h1>
 
-            <FadeIn delay={0.4} className="flex flex-col items-start justify-end">
-                <a 
-                href="#work"
-                className="group flex items-center gap-4 text-foreground hover:text-muted transition-colors"
-                >
-                    <div className="w-12 h-12 border border-border rounded-full flex items-center justify-center group-hover:border-foreground transition-colors">
-                        <ArrowDown size={20} className="group-hover:translate-y-1 transition-transform" />
-                    </div>
-                    <span className="font-mono text-xs uppercase tracking-widest">View Work</span>
-                </a>
-            </FadeIn>
-        </div>
+        {/* Subtext */}
+        <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
+          End-to-end website and app development. From initial concept to
+          production-ready deployment for businesses of all sizes.
+        </p>
 
-        {/* Hero Image / Visualization */}
-        <FadeIn delay={0.5} className="mt-24 relative">
-            <div className="relative w-full h-[45vh] overflow-hidden bg-card border-t border-border">
-               <img 
-                src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop" 
-                alt="City Architecture" 
-                className="object-cover w-full h-full opacity-40 dark:opacity-40 grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
-              />
-              {/* Subtle Tech Overlay - Adaptive gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-              
-              <div className="absolute bottom-6 left-6 flex gap-8">
-                <div>
-                    <span className="block font-mono text-[10px] text-muted uppercase mb-1">Location</span>
-                    <span className="block font-sans text-sm text-foreground">Global / Remote</span>
-                </div>
-                <div>
-                    <span className="block font-mono text-[10px] text-muted uppercase mb-1">Focus</span>
-                    <span className="block font-sans text-sm text-foreground">Product & Scale</span>
-                </div>
-              </div>
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+          {/* Primary Pill CTA mimicking the reference image */}
+          <a
+            className="flex items-center p-1.5 bg-black dark:bg-white rounded-full pl-6 hover:scale-105 transition-transform duration-200 shadow-xl"
+            href="/#connect"
+          >
+            <span className="text-white dark:text-black font-semibold text-base mr-4">
+              Get in touch
+            </span>
+            <div className="bg-white dark:bg-black rounded-full p-2.5">
+              <Zap className="w-4 h-4 text-black dark:text-white fill-current" />
             </div>
-        </FadeIn>
+          </a>
+
+          {/* Secondary CTA */}
+          <a
+            href="#work"
+            className="flex items-center gap-2 text-black dark:text-white font-semibold hover:opacity-60 transition-opacity"
+          >
+            View our work <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
       </div>
     </section>
   );
